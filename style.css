@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Roboto+Slab:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+font-family: 'Comforter', cursive;
+   font-family: 'Roboto Slab', serif;
+}
+body {
+  
+  /* min-height: 100vh;  
+    background-color: rgb(8, 8, 8) */
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navigation {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  border-radius: 10px;
+  border-left: 5px solid blue;
+  background: blue;
+  transition: width 0.5s;
+  overflow-x: hidden;
+}
+/*active frome javascript its work like hover*/
+.navigation.active {
+  width: 300px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.navigation ul li.active {
+  background: rgb(2, 2, 2);
+}
+/* corner */
+.navigation ul li b:nth-child(1) {
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background: black;
+  display: none;
+}
+.navigation ul li b:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 20px;
+  background: blue;
+}
+.navigation ul li b:nth-child(2) {
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background: black;
+  display: none;
+}
+.navigation ul li b:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  background: blue;
+}
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2) {
+  display: block;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+.navigation ul li.active a {
+  color: rgb(253, 250, 250);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.5em;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  line-height: 47px;
+  white-space: normal;
+}
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle.active {
+  background: red;
+}
+.toggle ion-icon {
+  position: absolute;
+  color: white;
+  font-size: 34px;
+  display: none;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close {
+  display: block;
+}
+/* active work hover */
+.toggle ion-icon.close,
+.toggle.active ion-icon.open {
+  display: none;
+}

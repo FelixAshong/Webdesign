@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    /* background: #000; */
+    background-image: url(1235.jpg);
+    background-size: cover;
+}
+
+#clock h1{
+    position: relative;
+    display: block;
+    color: rgb(245, 10, 10);
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 2em;
+}
+#clock #time{
+    display: flex;
+}
+#clock #time div{
+    position: relative;
+    margin: 0 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+#clock #time div span{
+    position: relative;
+    display: block;
+    width:200px;
+    height: 200px;
+    background:rgba(2, 2, 141, 0.651);
+    color:  #fefeff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgb(5, 5, 5);
+}
+#clock #time div span:nth-child(2)
+{
+    height: 50px;
+    font-size: 1em;
+    letter-spacing: .2em;
+    font-weight: 1000;
+    z-index:9;
+    box-shadow: none;
+    background:rgba(0, 0, 255, 0.199);
+    text-transform: uppercase;
+}
+#clock #time div:last-child span
+{
+    background:rgba(255, 0, 0, 0.623);
+}
+#clock #time div:last-child span:nth-child(2)
+{
+    background:rgba(184, 84, 84, 0.623);
+}

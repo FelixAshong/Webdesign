@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital watch</title>
+    <link rel="stylesheet" href="style-digitalclock.css">
+    
+</head>
+
+<body>
+
+
+    <div id="clock">
+        
+        <hr style="height: 20px;border: none;background-color: blue;width: 50%;">
+        <h1 style="color:rgb(0, 0, 255);">THE TIME IS NOW</h1>
+        <hr style="height: 20px;border: none;background-color: rgb(255, 0, 0);width: 48%;margin-left: 50%;margin-bottom: 3px;">
+        <div id="time">
+            
+            <div><span id="Hours">00</span><span>Hours</span></div>
+            <div><span id="Minutes">00</span><span>Minutes</span></div>
+            <div><span id="Seconds">00</span><span>Seconds</span></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    {
+        function clock() {
+            var Hours = document.getElementById('Hours');
+            var Minutes = document.getElementById('Minutes');
+            var Second = document.getElementById('Seconds');
+
+            var h = new Date().getHours();
+            var m = new Date().getMinutes();
+            var s = new Date().getSeconds();
+
+            Hours.innerHTML = h;
+            Minutes.innerHTML = m;
+            Second.innerHTML = s;
+            
+        }
+        var interval = setInterval(clock,1000);
+         
+
+     }
+    </script>
+</body>
+
+</html>
